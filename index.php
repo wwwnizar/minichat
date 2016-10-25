@@ -15,7 +15,7 @@
     <?php
     // php part (print the message from the database)
     try {
-	$myBase = new PDO('mysql:host=localhost;dbname=minichat;charset=utf8','dehondtmatthieu', 'mD120989');
+	$myBase = new PDO('mysql:host=localhost;dbname=exercice;charset=utf8','dehondtmatthieu', 'mD120989');
     }
     catch (Exception $error) {
 	die('Erreur: '.$error->getMessage());
@@ -23,11 +23,11 @@
 
 
     // get 10 last messages
-    $allTable = $myBase->query('SELECT pseudo, message FROM Minichat ORDER BY id DESC LIMIT 0, 10');
+    $allTable = $myBase->query('SELECT id, autheur, contenu FROM Messages ORDER BY id DESC LIMIT 0, 10');
 
     //print the messages
     while ($row = $allTable->fetch()) {
-	echo '<p><bold>'.htmlspecialchars($row['pseudo']).'</bold>: '.htmlspecialchars($row['message']).'</p>';
+	echo '<p><bold>the id is '.$row['id'].'! -> '.htmlspecialchars($row['autheur']).'</bold>: '.htmlspecialchars($row['contenu']).'</p>';
     }
     $allTable->closeCursor();
     ?>

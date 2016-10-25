@@ -9,7 +9,7 @@ class Message
     //constructor for Message object
     public function __construct($donnees)
     {
-	$this->hydrate($donnees)
+	$this->hydrate($donnees);
     }
     
     public function hydrate(array $donnees)
@@ -39,7 +39,7 @@ class Message
 
     public function content()
     {
-	retturn $this->_content;
+	return $this->_content;
     }
 
     //setters
@@ -60,16 +60,14 @@ class Message
 	}
     }
 
-    public function setContent($content))
+    public function setContent($content)
     {
 	if (is_string($content))
 	{
 	    $this->_content = $content;
 	}
     }
-    
-    
-
+ 
 }
 
   
