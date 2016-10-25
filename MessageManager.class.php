@@ -27,23 +27,22 @@ class MessageManager
 	$insertion->bindValue(':contenu', $mess->content());
 
 	$insertion->execute();
-	echo 'message add';
     }
 
-    public function modifyMessage(Message $mess, $contenu)
+    public function modifyMessage($id, $contenu)
     {
 	
 	$modification = $this->_myBase->prepare('UPDATE Messages SET contenu = :content WHERE id = :id');
 	$modification->bindValue(':content', $contenu);
-	$modification->bindValue(':id', $mess->id(), PDO::PARAM_INT);
+	$modification->bindValue(':id', $id, PDO::PARAM_INT);
 
 	$modification->execute();
     }
 
-    public function deleteMessage(Message $mess)
+    public function deleteMessage($id)
     {
 	$delete = $this->_myBase->prepare('DELETE FROM Messages WHERE id = :id');
-	$delete->bindValue(':id', $mess->id(), PDO::PARAM_INT);
+	$delete->bindValue(':id', $id, PDO::PARAM_INT);
 
 	$delete->execute();
     }
