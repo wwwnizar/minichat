@@ -10,7 +10,7 @@ spl_autoload_register('chargerClass');
 
 //connexion to database
 //try {
-$mybase = new PDO('mysql:host=localhost;dbname=exercice;charset=utf8', ' );
+$mybase = new PDO('mysql:host=localhost;dbname=exercice;charset=utf8', 'dehondtmatthieu', 'mD120989' );
 /*}
    catch(Exception $error) {
    die('Error: '.$error->getMessage());
