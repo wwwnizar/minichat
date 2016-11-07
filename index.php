@@ -17,7 +17,7 @@
       <?php
       // php part (print the message from the database)
       try {
-	  $myBase = new PDO('mysql:host=localhost;dbname=exercice;charset=utf8','dehondtmatthieu', 'mD120989');
+	  $myBase = new PDO('mysql:host=localhost;dbname=exercice;charset=utf8','');
       }
       catch (Exception $error) {
 	  die('Erreur: '.$error->getMessage());
