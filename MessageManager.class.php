@@ -59,7 +59,7 @@ class MessageManager
 	$this->_myBase->exec('DELETE FROM Messages');
     }
     
-   
+
     
     
     
