@@ -5,7 +5,7 @@
 
   <!-- Blog Entries Column -->
   <div class="col-md-8">
-    <h1>MyChat , new chat website ! </h1>
+    <h1>MyChat , openclassroom exercice </h1>
     <div class="">
       <h2>Envoyer un message</h2>
       <form action="mychat_post.php" method="post">
